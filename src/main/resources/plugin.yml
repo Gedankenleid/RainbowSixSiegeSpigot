@@ -1,0 +1,11 @@
+name: Rainbow
+version: ${project.version}
+main: de.lamue.rainbow.Rainbow
+api-version: 1.16
+prefix: R6S
+authors: [ 5TC ]
+description: Rainbow Six Siege in Minecraft
+website: la-mue.de
+
+commands:
+  setspawn:

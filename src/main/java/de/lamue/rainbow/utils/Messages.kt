@@ -7,7 +7,7 @@ import org.bukkit.entity.Player
 
 object Messages {
 
-    val PREFIX: String = "§eR6S §7> §f"
+    val PREFIX: String = "§6§lR6S §7> §f"
 
     val NOPERM: String = "§cDu hast nicht die benötigten Rechte!"
     val NOTAPLAYER: String = "§cDu musst ein Spieler sein um dies auszuführen!"

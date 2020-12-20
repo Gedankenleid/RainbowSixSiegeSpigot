@@ -12,7 +12,7 @@ object PlayerQuit : Listener {
 
     @EventHandler
     fun onQuit(event: PlayerQuitEvent){
-        if(GameManager.getGameState().equals(GameState.LOBBY)){
+        if(GameManager.getGameState().equals(GameState.LOBBY) || GameManager.getGameState().equals(GameState.FINISHED)){
             var player : Player = event.player
             event.quitMessage = "§c${player.name} §7hat das Spiel verlassen!"
         }

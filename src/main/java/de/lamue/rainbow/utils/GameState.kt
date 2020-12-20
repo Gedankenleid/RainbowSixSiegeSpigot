@@ -4,6 +4,7 @@ enum class GameState {
 
     LOBBY,
     RUNNING,
-    FINISHED
+    FINISHED,
+    CHOOSING
 
 }

@@ -27,6 +27,9 @@ class Rainbow : JavaPlugin() {
         pluginManager.registerEvents(EntityDamage, this)
         pluginManager.registerEvents(BlockBreak, this)
         pluginManager.registerEvents(BlockPlace, this)
+        try {
+            pluginManager.registerEvents(InventoryClose, this)
+        }catch (exception: Exception){}
 
         getCommand("setspawn")!!.setExecutor(SetSpawn)
         LocationManager.spawnLocation = LocationManager.getSpawn()

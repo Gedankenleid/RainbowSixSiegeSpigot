@@ -8,6 +8,7 @@ import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
+import org.bukkit.potion.PotionEffectType
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -18,6 +19,8 @@ object PlayerJoin : Listener {
     @EventHandler
     fun onJoin(event: PlayerJoinEvent) {
         var player: Player = event.player
+        player.removePotionEffect(PotionEffectType.BLINDNESS)
+        player.removePotionEffect(PotionEffectType.WEAKNESS)
         if(GameManager.getGameState().equals(GameState.LOBBY)){
             CountdownManager.startCountdown()
             event.joinMessage = "§a${player.name} §7hat das Spiel betreten!"

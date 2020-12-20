@@ -8,7 +8,7 @@ object CountdownManager {
 
     lateinit var instance: Rainbow
 
-    val minPlayerToStart: Int = 1 //Minimum clients to start the game
+    val minPlayerToStart: Int = 2
     var countdownIsRunning: Boolean = false
     var currentCount: Int = 61
     var countdown: Int = 0
@@ -52,10 +52,8 @@ object CountdownManager {
         Bukkit.getOnlinePlayers().forEach{
             it.playSound(it.location, Sound.BLOCK_NOTE_BLOCK_PLING, 5F, 1F)
         }
-        GameManager.setGameState(GameState.CHOOSING)
-        Bukkit.getOnlinePlayers().forEach {
-            PlayerManager.setPlayerType(it, PlayerType.CHOOSING)
-        }
+        GameManager.startGame()
+
     }
 
 }

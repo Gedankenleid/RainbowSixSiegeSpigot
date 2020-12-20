@@ -13,6 +13,7 @@ class Rainbow : JavaPlugin() {
         GameManager.setGameState(GameState.LOBBY)
         PlayerJoin.instance = this
         CountdownManager.instance = this
+        GameManager.instance = this
         val pluginManager: PluginManager = Bukkit.getPluginManager()
         ConfigManager.check()
 

@@ -15,7 +15,7 @@ object PlayerMove : Listener {
     fun onMove(event: PlayerMoveEvent){
         var player: Player = event.player
         if(GameManager.getGameState().equals(GameState.CHOOSING)){
-            if(PlayerManager.getPlayerType(player).equals(PlayerType.CHOOSING)){
+            if(!PlayerManager.getPlayerType(player).equals(PlayerType.SPECTATOR)){
                 event.isCancelled = true
             }
         }
